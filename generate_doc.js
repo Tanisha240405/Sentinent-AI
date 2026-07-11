@@ -152,7 +152,7 @@ function coverPage() {
     new Paragraph({
       alignment: AlignmentType.CENTER,
       spacing: { before: 0, after: 80 },
-      children: [new TextRun({ text: 'Antigravity', font: 'Arial', size: 30, bold: true, color: PERI })]
+      children: [new TextRun({ text: 'Development Team', font: 'Arial', size: 30, bold: true, color: PERI })]
     }),
     ...spacer(1),
     new Paragraph({
@@ -208,7 +208,7 @@ const doc = new Document({
             children: [
               new TextRun({ text: 'SentientAI — PRD & Design Brief', font: 'Arial', size: 18, color: BLUE }),
               new TextRun({ text: '\t', font: 'Arial', size: 18 }),
-              new TextRun({ text: 'For Antigravity · v1.0', font: 'Arial', size: 18, color: '999999' })
+              new TextRun({ text: 'For Development Team · v1.0', font: 'Arial', size: 18, color: '999999' })
             ]
           })
         ]
@@ -246,7 +246,7 @@ const doc = new Document({
       ...spacer(1),
       body('Users type in a brand name. The product scrapes Reddit, news outlets, and Twitter/X, runs the text through six NLP algorithms simultaneously (including a Groq-powered LLM), and returns an animated dashboard showing sentiment scores, emotion breakdowns, trending topics, and AI-generated insights — all in one clean interface.'),
       ...spacer(1),
-      note('This document is the complete product and design brief for Antigravity to generate the website. It covers user flows, page-by-page content specs, visual design direction, color system, component inventory, and technical integration notes.'),
+      note('This document is the complete product and design brief to generate the website. It covers user flows, page-by-page content specs, visual design direction, color system, component inventory, and technical integration notes.'),
       ...spacer(1),
 
       // Quick-reference table
@@ -292,7 +292,7 @@ const doc = new Document({
         ]
       }),
       ...spacer(1),
-      note('Antigravity note: The light-mode version of the site uses Cream (#F5F6E6) as page background with Navy (#363955) text. Dark mode flips to Canvas (#1E2035) background. The landing page hero section is always dark regardless of mode.'),
+      note('Design note: The light-mode version of the site uses Cream (#F5F6E6) as page background with Navy (#363955) text. Dark mode flips to Canvas (#1E2035) background. The landing page hero section is always dark regardless of mode.'),
 
       ...spacer(2),
       divider(),
@@ -607,7 +607,7 @@ const doc = new Document({
       // 7. COMPONENT INVENTORY
       // ════════════════════════════════
       heading1('7.  Component Inventory'),
-      body('All reusable UI components that Antigravity should implement. These are design-system primitives — build once, use everywhere.'),
+      body('All reusable UI components to implement. These are design-system primitives — build once, use everywhere.'),
       ...spacer(1),
 
       new Table({
@@ -690,7 +690,7 @@ const doc = new Document({
       // ════════════════════════════════
       // 10. TECH INTEGRATION NOTES
       // ════════════════════════════════
-      heading1('10.  Technical Integration Notes for Antigravity'),
+      heading1('10.  Technical Integration Notes'),
       body('These are notes for the build team — not design decisions, just context to avoid surprises.'),
       ...spacer(1),
 
@@ -752,7 +752,7 @@ const doc = new Document({
         columnWidths: [1200, 1800, 2400, 3960],
         rows: [
           headerRow(['Version', 'Date', 'Author', 'Notes'], [1200, 1800, 2400, 3960]),
-          dataRow(['1.0', 'June 2026', 'Product Team', 'Initial PRD and design brief for Antigravity'], [1200, 1800, 2400, 3960]),
+          dataRow(['1.0', 'June 2026', 'Product Team', 'Initial PRD and design brief'], [1200, 1800, 2400, 3960]),
         ]
       }),
 
@@ -764,13 +764,13 @@ const doc = new Document({
       }),
       new Paragraph({
         alignment: AlignmentType.CENTER,
-        children: [new TextRun({ text: 'SentientAI · PRD v1.0 · Confidential · For Antigravity', font: 'Arial', size: 18, color: 'BBBBBB' })]
+        children: [new TextRun({ text: 'SentientAI · PRD v1.0 · Confidential', font: 'Arial', size: 18, color: 'BBBBBB' })]
       }),
     ]
   }]
 });
 
 Packer.toBuffer(doc).then(buffer => {
-  fs.writeFileSync('e:\\brand sentiment monitor\\SentientAI_PRD_Antigravity.docx', buffer);
-  console.log('Done: SentientAI_PRD_Antigravity.docx');
+  fs.writeFileSync('e:\\brand sentiment monitor\\SentientAI_PRD.docx', buffer);
+  console.log('Done: SentientAI_PRD.docx');
 });
